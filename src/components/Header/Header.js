@@ -1,12 +1,27 @@
 import "./Header.css";
 import logo from "../../images/logo.svg";
+import { NavLink } from "react-router-dom";
 
-export function Header({ children }) {
+export function Header({ navigationButtons }) {
   return (
     <header className="header">
-      <img className="header__logo" src={logo} />
-      <div className="headr__menu">
-        {children}
+      <div className="header__container">
+        <img className="header__logo" src={logo} alt="logo" />
+        <div className="header__menu">
+          <nav>
+            <ul className="header__menu-list">
+              {navigationButtons.map((button) => {
+                return (
+                  <li key={button} className="header__menu-item">
+                    <NavLink className="header__menu-link" to="/">
+                      {button}
+                    </NavLink>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
   );
