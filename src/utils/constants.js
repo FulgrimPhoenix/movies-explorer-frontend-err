@@ -40,8 +40,8 @@ export const projectConstants = {
     signature: "Ivanyuschin Ilia © 2020",
     mainInfo:"Учебный проект Яндекс.Практикум х BeatFilm.",
     links: [
-      { title: "Яндекс.Практикум", link: "https://fulgrimphoenix.github.io/how-to-learn/" },
-      { title: "Github", link: "https://fulgrimphoenix.github.io/how-to-learn/" }
+      { title: "Яндекс.Практикум", link: "https://practicum.yandex.ru/" },
+      { title: "Github", link: "https://github.com/" }
     ]
   }
 };
