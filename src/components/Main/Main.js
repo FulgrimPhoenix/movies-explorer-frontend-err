@@ -1,7 +1,8 @@
 import { AboutProject } from "../AboutProject/AboutProject";
+import { Technologies } from "../Technologies/Technologies";
 import "./Main.css";
 
-export function Main({data_for_about}) {
+export function Main({ projectConstants }) {
   return (
     <main className="main">
       <section className="intro">
@@ -16,7 +17,13 @@ export function Main({data_for_about}) {
           <li className="menu__list-item">Студент</li>
         </ul>
       </nav>
-    <AboutProject data_for_about={data_for_about} />
+      <AboutProject
+        dataForAboutProject={projectConstants.dataForAboutProject}
+      />
+      <Technologies
+        technologyList={projectConstants.technologyList}
+        dataForTechnologySection={projectConstants.dataForTechnologySection}
+      />
     </main>
   );
 }

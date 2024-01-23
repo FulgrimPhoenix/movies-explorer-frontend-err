@@ -3,7 +3,7 @@ import "./App.css";
 import { Header } from "../Header/Header";
 import { Movies } from "../Movies/Movies";
 import { Main } from "../Main/Main";
-import { data_for_about } from "../../utils/constants";
+import { projectConstants } from "../../utils/constants";
 
 function App() {
 
@@ -19,7 +19,7 @@ function App() {
           path="/"
           element={
             <>
-              <Main data_for_about={data_for_about}/>
+              <Main projectConstants={projectConstants}/>
             </>
           }
         />
