@@ -1,5 +1,7 @@
-import { AboutProject } from "../AboutProject/AboutProject";
-import { Technologies } from "../Technologies/Technologies";
+import { AboutMe } from "../AboutMe/AboutMe.js";
+import { AboutProject } from "../AboutProject/AboutProject.js";
+import { Portfolio } from "../Portfolio/Portfolio.js";
+import { Techs } from "../Techs/Techs.js";
 import "./Main.css";
 
 export function Main({ projectConstants }) {
@@ -18,12 +20,14 @@ export function Main({ projectConstants }) {
         </ul>
       </nav>
       <AboutProject
-        dataForAboutProject={projectConstants.dataForAboutProject}
+        aboutProjectData={projectConstants.aboutProjectData}
       />
-      <Technologies
-        technologyList={projectConstants.technologyList}
-        dataForTechnologySection={projectConstants.dataForTechnologySection}
+      <Techs
+        techsList={projectConstants.techsData.techsList}
+        techsData={projectConstants.techsData}
       />
+      <AboutMe AboutMeData={projectConstants.AboutMeData} />
+      <Portfolio portfolioData={projectConstants.portfolioData} />
     </main>
   );
 }

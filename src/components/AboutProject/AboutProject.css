@@ -1,13 +1,13 @@
-.about-project-section {
+.about-project {
   margin: 0 auto;
 }
 
-.about-project-section__container {
+.about-project__container {
   max-width: 1140px;
   margin: 0 auto;
 }
 
-.about-project-section__items {
+.about-project__items {
   display: flex;
   padding: 70px 0 0;
   flex-direction: row;
@@ -16,7 +16,7 @@
   justify-content: space-between;
 }
 
-.about-project-section__item-title {
+.about-project__item-title {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -29,7 +29,7 @@
   letter-spacing: -0.8px;
 }
 
-.about-project-section__item-description {
+.about-project__item-description {
   margin: 26px 0 0;
   color: #000;
   font-family: Inter;
@@ -40,7 +40,7 @@
   max-width: 550px;
 }
 
-.about-project-section__timeline-container {
+.about-project__timeline-container {
   margin: 110px auto 0;
   padding-bottom: 110px;
   display: grid;
@@ -49,15 +49,15 @@
   text-align: center;
 }
 
-.about-project-section__timeline-item {
+.about-project__timeline-item {
   background: #f2f2f2;
 }
 
-.about-project-section__timeline-item_dark-theme {
+.about-project__timeline-item_dark-theme {
   background: #000;
 }
 
-.about-project-section__timeline-text {
+.about-project__timeline-text {
   color: #000;
   font-family: Inter;
   font-size: 14px;
@@ -66,7 +66,7 @@
   line-height: normal;
 }
 
-.about-project-section__timeline-text_dark-theme {
+.about-project__timeline-text_dark-theme {
   color: #fff;
   font-family: Inter;
   font-size: 14px;
@@ -75,7 +75,7 @@
   line-height: normal;
 }
 
-.about-project-section__timeline-title {
+.about-project__timeline-title {
   margin: 0;
   color: #a0a0a0;
   text-align: center;
