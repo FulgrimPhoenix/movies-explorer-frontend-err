@@ -36,4 +36,12 @@ export const projectConstants = {
       { title: "Одностраничное приложение", link: "https://garazhelka.nomoredomainsmonster.ru/" },
     ],
   },
+  footerData: {
+    signature: "Ivanyuschin Ilia © 2020",
+    mainInfo:"Учебный проект Яндекс.Практикум х BeatFilm.",
+    links: [
+      { title: "Яндекс.Практикум", link: "https://fulgrimphoenix.github.io/how-to-learn/" },
+      { title: "Github", link: "https://fulgrimphoenix.github.io/how-to-learn/" }
+    ]
+  }
 };
