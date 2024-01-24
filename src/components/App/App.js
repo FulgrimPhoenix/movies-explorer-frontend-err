@@ -4,7 +4,7 @@ import "../../vendor/normalize.css"
 import "./App.css";
 
 import { Header } from "../Header/Header";
-import { Movies } from "../Movies/Movies";
+import { Movies } from "../Movies/Movies.js";
 import { Main } from "../Main/Main";
 import { projectConstants } from "../../utils/constants";
 import { Footer } from "../Footer/Footer";
@@ -17,7 +17,7 @@ function App() {
         navigationButtons={['Фильмы', 'Сохраненные фильмы']}
       />
       <Routes>
-        <Route path="/movies" element={<Movies />} />
+        <Route path="movies" element={<Movies />} />
         <Route path="/saved-movis" />
         <Route
           path="/"

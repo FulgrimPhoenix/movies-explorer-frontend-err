@@ -9,7 +9,7 @@ export function Footer({ footerData }) {
         <nav className="footer__links">
           {footerData.links.map((item) => {
             return (
-              <a className="footer__link" href={item.link} target="blank">
+              <a key={item.title} className="footer__link" href={item.link} target="blank">
                 {item.title}
               </a>
             );
