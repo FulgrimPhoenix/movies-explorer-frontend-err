@@ -1,4 +1,5 @@
 import myPhoto from "../images/myPhoto.jpg";
+import searchIcon from "../images/search-icon.svg";
 
 export const projectConstants = {
   aboutProjectData: [
@@ -31,17 +32,32 @@ export const projectConstants = {
     sectionTitle: "Портфолио",
     menuIcon: "↗",
     projects: [
-      { title: "Статичный сайт", link: "https://fulgrimphoenix.github.io/how-to-learn/" },
-      { title: "Адаптивный сайт", link: "https://fulgrimphoenix.github.io/russian-travel/" },
-      { title: "Одностраничное приложение", link: "https://garazhelka.nomoredomainsmonster.ru/" },
+      {
+        title: "Статичный сайт",
+        link: "https://fulgrimphoenix.github.io/how-to-learn/",
+      },
+      {
+        title: "Адаптивный сайт",
+        link: "https://fulgrimphoenix.github.io/russian-travel/",
+      },
+      {
+        title: "Одностраничное приложение",
+        link: "https://garazhelka.nomoredomainsmonster.ru/",
+      },
     ],
   },
   footerData: {
     signature: "Ivanyuschin Ilia © 2020",
-    mainInfo:"Учебный проект Яндекс.Практикум х BeatFilm.",
+    mainInfo: "Учебный проект Яндекс.Практикум х BeatFilm.",
     links: [
       { title: "Яндекс.Практикум", link: "https://practicum.yandex.ru/" },
-      { title: "Github", link: "https://github.com/" }
-    ]
-  }
+      { title: "Github", link: "https://github.com/" },
+    ],
+  },
+  formSearchUtils: {
+    search_icon: searchIcon,
+    alt_search_icon: "search icon",
+    button_text: "Найти",
+    checkbox_title: "Короткометражки",
+  },
 };
