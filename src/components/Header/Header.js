@@ -13,7 +13,7 @@ export function Header({ navigationButtons }) {
               {navigationButtons.map((button) => {
                 return (
                   <li key={button} className="header__menu-item">
-                    <NavLink className="header__menu-link" to="/">
+                    <NavLink className="header__menu-link" to="/movies">
                       {button}
                     </NavLink>
                   </li>

@@ -1,5 +1,14 @@
 import myPhoto from "../images/myPhoto.jpg";
 import searchIcon from "../images/search-icon.svg";
+import savedImg from "../images/savedImg.svg";
+//HQ picture
+import slova_o_disaineHQ from "../images/movieList/33_slova_o_disaine.png";
+import kinoalmanaxHQ from "../images/movieList/Kinoalmanax.png";
+import v_pogone_za_BenksiHQ from "../images/movieList/V_pogone_za_Benksi.png";
+//LQ picture
+import slova_o_disaineLQ from "../images/movieList/33_slova_o_disaine.jpg";
+import kinoalmanaxLQ from "../images/movieList/Kinoalmanax.jpg";
+import v_pogone_za_BenksiLQ from "../images/movieList/V_pogone_za_Benksi.jpg";
 
 export const projectConstants = {
   aboutProjectData: [
@@ -59,5 +68,49 @@ export const projectConstants = {
     alt_search_icon: "search icon",
     button_text: "Найти",
     checkbox_title: "Короткометражки",
+  },
+  moviesData: {
+    movieList: [
+      {
+        imgSrcHQ: slova_o_disaineHQ,
+        imgSrc: slova_o_disaineLQ,
+        title: "33 слова о дизайне",
+        duration: "1ч 17м",
+      },
+      {
+        imgSrcHQ: kinoalmanaxHQ,
+        imgSrc: kinoalmanaxLQ,
+        title: "Киноальманах «100 лет дизайна»",
+        duration: "1ч 17м",
+      },
+      {
+        imgSrcHQ: v_pogone_za_BenksiHQ,
+        imgSrc: v_pogone_za_BenksiLQ,
+        title: "В погоне за Бенкси",
+        duration: "1ч 17м",
+      },
+      {
+        imgSrcHQ: slova_o_disaineHQ,
+        imgSrc: slova_o_disaineLQ,
+        title: "33 слова о дизайне1",
+        duration: "1ч 17м",
+      },
+      {
+        imgSrcHQ: kinoalmanaxHQ,
+        imgSrc: kinoalmanaxLQ,
+        title: "Киноальманах «100 лет дизайна»1",
+        duration: "1ч 17м",
+      },
+      {
+        imgSrcHQ: v_pogone_za_BenksiHQ,
+        imgSrc: v_pogone_za_BenksiLQ,
+        title: "В погоне за Бенкси1",
+        duration: "1ч 17м",
+      },
+    ],
+    staticData: {
+      saveButtonText: "Сохранить",
+      savedImg: savedImg,
+    },
   },
 };
