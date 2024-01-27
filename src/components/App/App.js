@@ -14,11 +14,27 @@ import { MovieCardList } from "../MovieCardList/MovieCardList.js";
 
 
 function App() {
-  const [cardListLength, setCardListLength] = React.useState(3);
 
-  function showMoreCards(){
+  const [cardListLength, setCardListLength] = React.useState(3);
+  const [cardList, setCardList] = React.useState(() => {
+    let result = [];
+    for (let i = 0; i < cardListLength; i++) {
+      result[i] = projectConstants.moviesData.movieList[i];
+    }
+    return result
+  });
+  React.useEffect(() => {
+    setCardList(() => {
+      let result = [];
+      for (let i = 0; i < cardListLength; i++) {
+        result[i] = projectConstants.moviesData.movieList[i];
+      }
+      return result
+    })
+  }, [cardListLength]);
+
+  function showMoreCards() {
     setCardListLength(cardListLength + 3);
-    console.log(cardListLength);
   }
 
   return (
@@ -34,7 +50,7 @@ function App() {
                   formSearchUtils={projectConstants.formSearchUtils}
                 />
                 <MovieCardList
-                  cardList={projectConstants.moviesData.movieList}
+                  cardList={cardList}
                   cardCellData={projectConstants.moviesData.staticData}
                   onMoreClick={showMoreCards}
                 />
