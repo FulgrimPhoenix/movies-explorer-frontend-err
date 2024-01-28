@@ -15,28 +15,6 @@ import { MovieCardList } from "../MovieCardList/MovieCardList.js";
 
 function App() {
 
-  const [cardListLength, setCardListLength] = React.useState(3);
-  const [cardList, setCardList] = React.useState(() => {
-    let result = [];
-    for (let i = 0; i < cardListLength; i++) {
-      result[i] = projectConstants.moviesData.movieList[i];
-    }
-    return result
-  });
-  React.useEffect(() => {
-    setCardList(() => {
-      let result = [];
-      for (let i = 0; i < cardListLength; i++) {
-        result[i] = projectConstants.moviesData.movieList[i];
-      }
-      return result
-    })
-  }, [cardListLength]);
-
-  function showMoreCards() {
-    setCardListLength(cardListLength + 3);
-  }
-
   return (
     <div className="page">
       <Header navigationButtons={["Фильмы", "Сохраненные фильмы"]} />
@@ -50,9 +28,8 @@ function App() {
                   formSearchUtils={projectConstants.formSearchUtils}
                 />
                 <MovieCardList
-                  cardList={cardList}
                   cardCellData={projectConstants.moviesData.staticData}
-                  onMoreClick={showMoreCards}
+                  movieList={projectConstants.moviesData.movieList}
                 />
               </>
             }
