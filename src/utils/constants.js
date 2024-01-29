@@ -1,6 +1,8 @@
 import myPhoto from "../images/myPhoto.jpg";
 import searchIcon from "../images/search-icon.svg";
 import savedImg from "../images/savedImg.svg";
+import logo from "../images/logo.svg"
+import legacyLogo from "../images/logo.png"
 //HQ picture
 import slova_o_disaineHQ from "../images/movieList/33_slova_o_disaine.png";
 import kinoalmanaxHQ from "../images/movieList/Kinoalmanax.png";
@@ -113,4 +115,12 @@ export const projectConstants = {
       savedImg: savedImg,
     },
   },
+  registerFormData: {
+    logo: logo,
+    legacyLogo: legacyLogo,
+    title: "Добро пожаловать!",
+    buttonText: "Зарегистрироваться",
+    redirectLine: "Уже зарегестрированы?",
+    redirectLink: "/signin",
+  }
 };

@@ -11,19 +11,22 @@ import { projectConstants } from "../../utils/constants";
 import { Footer } from "../Footer/Footer";
 import { SearchForm } from "../SearchForm/SearchForm.js";
 import { MovieCardList } from "../MovieCardList/MovieCardList.js";
+import { Register } from "../Register/Register";
+import { LogRegForm } from "../LogRegForm/LogRegForm";
 
 
 function App() {
 
   return (
     <div className="page">
-      <Header navigationButtons={["Фильмы", "Сохраненные фильмы"]} />
+
       <Routes>
         <Route path="movies" element={<Movies />}>
           <Route
             index
             element={
               <>
+                <Header navigationButtons={["Фильмы", "Сохраненные фильмы"]} />
                 <SearchForm
                   formSearchUtils={projectConstants.formSearchUtils}
                 />
@@ -31,6 +34,7 @@ function App() {
                   cardCellData={projectConstants.moviesData.staticData}
                   movieList={projectConstants.moviesData.movieList}
                 />
+                <Footer footerData={projectConstants.footerData} />
               </>
             }
           />
@@ -40,15 +44,21 @@ function App() {
           path="/"
           element={
             <>
+              <Header navigationButtons={["Фильмы", "Сохраненные фильмы"]} />
               <Main projectConstants={projectConstants} />
+              <Footer footerData={projectConstants.footerData} />
             </>
           }
         />
         <Route path="/profile" />
-        <Route path="/signin" />
-        <Route path="/signup" />
+        <Route path="signin" element={<Register />}>
+          <Route index element={<LogRegForm formData={projectConstants.registerFormData} />} />
+        </Route>
+        <Route path="signup" element={<Register />}>
+          <Route index element={<LogRegForm formData={projectConstants.registerFormData} />} />
+        </Route>
       </Routes>
-      <Footer footerData={projectConstants.footerData} />
+      
     </div>
   );
 }
