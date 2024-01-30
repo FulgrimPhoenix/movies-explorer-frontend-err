@@ -13,13 +13,18 @@ import { SearchForm } from "../SearchForm/SearchForm.js";
 import { MovieCardList } from "../MovieCardList/MovieCardList.js";
 import { Register } from "../Register/Register";
 import { LogRegForm } from "../LogRegForm/LogRegForm";
-
+import { LogRegInput } from "../LogRegInput/LogRegInput.js";
 
 function App() {
+  const [email, setEmail] = React.useState("");
+
+  function changeEmail(e) {
+    setEmail(e.target.value);
+    console.log(email);
+  }
 
   return (
     <div className="page">
-
       <Routes>
         <Route path="movies" element={<Movies />}>
           <Route
@@ -51,14 +56,18 @@ function App() {
           }
         />
         <Route path="/profile" />
-        <Route path="signin" element={<Register />}>
-          <Route index element={<LogRegForm formData={projectConstants.registerFormData} />} />
-        </Route>
-        <Route path="signup" element={<Register />}>
-          <Route index element={<LogRegForm formData={projectConstants.registerFormData} />} />
-        </Route>
+        <Route
+          path="signin"
+          registerFormData={projectConstants.registerFormData}
+          element={<Register />}
+        ></Route>
+        <Route
+          path="signup"
+          element={
+            <Register registerFormData={projectConstants.registerFormData} />
+          }
+        ></Route>
       </Routes>
-      
     </div>
   );
 }

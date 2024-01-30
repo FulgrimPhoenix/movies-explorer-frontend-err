@@ -1,12 +1,12 @@
 .log-reg-form {
-  margin: 70px auto;
+  margin: 70px auto 0;
   display: flex;
   flex-direction: column;
   min-width: 396px;
 }
 
 .log-reg-form__title {
-  margin: 40px 0 0;
+  margin: 40px 0;
   padding: 0;
   text-align: left;
   color: #000;
@@ -38,34 +38,5 @@
 }
 
 .log-reg-form__button:hover{
-  opacity: .8;
-}
-
-.log-reg-form__redirect-line {
-  margin: 16px auto 0;
-  color: #A0A0A0;
-  text-align: center;
-  font-family: Inter;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-.log-reg-form__redirect-link {
-  margin: 0;
-  margin-left: 6px;
-  color: #000;
-  text-align: center;
-  font-family: Inter;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  text-decoration: none;
-  transition: opacity .2s ease-in;
-}
-
-.log-reg-form__redirect-link:hover{
   opacity: .8;
 }
