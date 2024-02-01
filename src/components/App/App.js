@@ -14,6 +14,7 @@ import { MovieCardList } from "../MovieCardList/MovieCardList.js";
 import { Register } from "../Register/Register";
 import { LogRegForm } from "../LogRegForm/LogRegForm";
 import { LogRegInput } from "../LogRegInput/LogRegInput.js";
+import { CurrentUserContext } from "../../context/CurrentUserContext.js";
 
 function App() {
   const [email, setEmail] = React.useState("");
@@ -24,51 +25,55 @@ function App() {
   }
 
   return (
-    <div className="page">
-      <Routes>
-        <Route path="movies" element={<Movies />}>
+    <CurrentUserContext.Provider value="">
+      <div className="page">
+        <Routes>
+          <Route path="movies" element={<Movies />}>
+            <Route
+              index
+              element={
+                <>
+                  <Header
+                    navigationButtons={["Фильмы", "Сохраненные фильмы"]}
+                  />
+                  <SearchForm
+                    formSearchUtils={projectConstants.formSearchUtils}
+                  />
+                  <MovieCardList
+                    cardCellData={projectConstants.moviesData.staticData}
+                    movieList={projectConstants.moviesData.movieList}
+                  />
+                  <Footer footerData={projectConstants.footerData} />
+                </>
+              }
+            />
+          </Route>
+          <Route path="/saved-movis" />
           <Route
-            index
+            path="/"
             element={
               <>
                 <Header navigationButtons={["Фильмы", "Сохраненные фильмы"]} />
-                <SearchForm
-                  formSearchUtils={projectConstants.formSearchUtils}
-                />
-                <MovieCardList
-                  cardCellData={projectConstants.moviesData.staticData}
-                  movieList={projectConstants.moviesData.movieList}
-                />
+                <Main projectConstants={projectConstants} />
                 <Footer footerData={projectConstants.footerData} />
               </>
             }
           />
-        </Route>
-        <Route path="/saved-movis" />
-        <Route
-          path="/"
-          element={
-            <>
-              <Header navigationButtons={["Фильмы", "Сохраненные фильмы"]} />
-              <Main projectConstants={projectConstants} />
-              <Footer footerData={projectConstants.footerData} />
-            </>
-          }
-        />
-        <Route path="/profile" />
-        <Route
-          path="signin"
-          registerFormData={projectConstants.registerFormData}
-          element={<Register />}
-        ></Route>
-        <Route
-          path="signup"
-          element={
-            <Register registerFormData={projectConstants.registerFormData} />
-          }
-        ></Route>
-      </Routes>
-    </div>
+          <Route path="/profile" />
+          <Route
+            path="signin"
+            registerFormData={projectConstants.registerFormData}
+            element={<Register />}
+          ></Route>
+          <Route
+            path="signup"
+            element={
+              <Register registerFormData={projectConstants.registerFormData} />
+            }
+          ></Route>
+        </Routes>
+      </div>
+    </CurrentUserContext.Provider>
   );
 }
 
