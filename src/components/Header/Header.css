@@ -146,3 +146,16 @@
   border: none;
   border-bottom: 2px solid rgb(0, 0, 0);
 }
+
+.header__menu-switcher{
+  margin: auto 30px auto 0;
+  padding: 0;
+  border: none;
+  background: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  transition: opacity .3s linear;
+}
+
+.header__menu-switcher:hover{
+  opacity: .7;
+}

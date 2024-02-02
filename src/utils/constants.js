@@ -7,6 +7,8 @@ import headerAccauntImg from "../images/headerLogo.svg";
 import headerLegacyAccauntImg from "../images/headerLogo.png";
 import headerAccauntImgPink from "../images/headerLogoForAll.svg";
 import headerLegacyAccauntImgPink from "../images/headerLogoForAll.svg";
+import navBarIcon from "../images/menuNavBarIcon.svg";
+import exitButton from "../images/exit.svg"
 //HQ picture
 import slova_o_disaineHQ from "../images/movieList/33_slova_o_disaine.png";
 import kinoalmanaxHQ from "../images/movieList/Kinoalmanax.png";
@@ -24,6 +26,7 @@ export const projectConstants = {
     legacyAccauntImg: headerLegacyAccauntImg,
     logo: logo,
     legacyLogo: headerLegacyAccauntImgPink,
+    navBarIcon: navBarIcon,
   },
   aboutProjectData: [
     {
@@ -150,4 +153,7 @@ export const projectConstants = {
       return `Привет, ${name}!`;
     },
   },
+  popupData: {
+    exitButton: exitButton,
+  }
 };

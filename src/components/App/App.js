@@ -16,6 +16,7 @@ import { CurrentUserContext } from "../../context/CurrentUserContext.js";
 import { Profile } from "../Profile/Profile.js";
 import { Login } from "../Login/Login.js";
 import { Page } from "../Page/Page.js";
+import { MenuPopup } from "../MenuPopup/MenuPopup.js";
 
 function App() {
   const [email, setEmail] = React.useState("");
@@ -92,6 +93,7 @@ function App() {
             }
           ></Route>
         </Routes>
+        <MenuPopup popupData={projectConstants.popupData}/>
       </div>
     </CurrentUserContext.Provider>
   );
