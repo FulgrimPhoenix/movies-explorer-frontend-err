@@ -1,30 +1,19 @@
 import { Link } from "react-router-dom";
+import { useForm } from "../../hooks/useForm";
+import { projectConstants } from "../../utils/constants";
 import { LogRegForm } from "../LogRegForm/LogRegForm";
 import { LogRegInput } from "../LogRegInput/LogRegInput";
-import { projectConstants } from "../../utils/constants";
-import "./Register.css";
-import { useForm } from "../../hooks/useForm";
+import "./Login.css";
 import { useEffect } from "react";
 
-export function Register({ registerFormData }) {
-  const { values, onChange, setValues } = useForm([]);
+export function Login({ loginFormData }) {
+  const { values, onChange, setValues } = useForm({});
 
-  useEffect(() => {
-    setValues([]);
-  }, []);
+  useEffect(() => setValues({}), []);
 
   return (
-    <main className="register">
+    <main className="login">
       <LogRegForm formData={projectConstants.registerFormData}>
-        <LogRegInput
-          name="name"
-          value={values["name"]}
-          onChange={onChange}
-          title="Имя"
-          inputType="text"
-          minLength={2}
-          maxLength={30}
-        />
         <LogRegInput
           name="email"
           value={values["email"]}
@@ -44,13 +33,10 @@ export function Register({ registerFormData }) {
           maxLength={16}
         />
       </LogRegForm>
-      <p className="register__redirect-line">
-        {registerFormData.redirectLine}
-        <Link
-          className="register__redirect-link"
-          to={registerFormData.redirectLink}
-        >
-          {registerFormData.redirectText}
+      <p className="login__redirect-line">
+        {loginFormData.redirectLine}
+        <Link className="login__redirect-link" to={loginFormData.redirectLink}>
+          {loginFormData.redirectText}
         </Link>
       </p>
     </main>

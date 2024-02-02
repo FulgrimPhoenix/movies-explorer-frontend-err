@@ -15,6 +15,8 @@ import { Register } from "../Register/Register";
 import { LogRegForm } from "../LogRegForm/LogRegForm";
 import { LogRegInput } from "../LogRegInput/LogRegInput.js";
 import { CurrentUserContext } from "../../context/CurrentUserContext.js";
+import { Profile } from "../Profile/Profile.js";
+import { Login } from "../Login/Login.js";
 
 function App() {
   const [email, setEmail] = React.useState("");
@@ -25,7 +27,9 @@ function App() {
   }
 
   return (
-    <CurrentUserContext.Provider value="">
+    <CurrentUserContext.Provider
+      value={{ profileName: "Dick", profileEmail: "test@mail.ru" }}
+    >
       <div className="page">
         <Routes>
           <Route path="movies" element={<Movies />}>
@@ -59,11 +63,13 @@ function App() {
               </>
             }
           />
-          <Route path="/profile" />
           <Route
-            path="signin"
-            registerFormData={projectConstants.registerFormData}
-            element={<Register />}
+            path="/profile"
+            element={<Profile profileData={projectConstants.profileData} />}
+          />
+          <Route
+            path="/signin"
+            element={<Login loginFormData={projectConstants.loginFormData} />}
           ></Route>
           <Route
             path="signup"

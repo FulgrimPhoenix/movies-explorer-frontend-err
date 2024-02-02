@@ -122,5 +122,18 @@ export const projectConstants = {
     buttonText: "Зарегистрироваться",
     redirectLine: "Уже зарегестрированы?",
     redirectLink: "/signin",
+    redirectText:"Войти"
+  },
+  loginFormData: {
+    logo: logo,
+    legacyLogo: legacyLogo,
+    title: "Рады видеть",
+    buttonText: "Войти",
+    redirectLine: "Ещё не зарегестрированы?",
+    redirectLink: "/signup",
+    redirectText:"Регистрация"
+  },
+  profileData: {
+    title: (name) => {return `Привет, ${name}!`},
   }
 };
