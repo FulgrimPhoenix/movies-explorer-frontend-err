@@ -4,7 +4,7 @@ export function LogRegForm( {children, formData }) {
   return (
     <form className="log-reg-form" noValidate>
       <picture>
-        <source srcSet={formData.logo} type="image/svg" />
+        <source srcSet={formData.logo} media="(min-width: 600px)" type="image/svg" />
         <img
           className="log-reg-form__logo"
           src={formData.legacyLogo}

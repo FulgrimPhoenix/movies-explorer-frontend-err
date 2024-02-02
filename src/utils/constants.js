@@ -1,8 +1,12 @@
 import myPhoto from "../images/myPhoto.jpg";
 import searchIcon from "../images/search-icon.svg";
 import savedImg from "../images/savedImg.svg";
-import logo from "../images/logo.svg"
-import legacyLogo from "../images/logo.png"
+import logo from "../images/logo.svg";
+import legacyLogo from "../images/logo.png";
+import headerAccauntImg from "../images/headerLogo.svg";
+import headerLegacyAccauntImg from "../images/headerLogo.png";
+import headerAccauntImgPink from "../images/headerLogoForAll.svg";
+import headerLegacyAccauntImgPink from "../images/headerLogoForAll.svg";
 //HQ picture
 import slova_o_disaineHQ from "../images/movieList/33_slova_o_disaine.png";
 import kinoalmanaxHQ from "../images/movieList/Kinoalmanax.png";
@@ -13,6 +17,14 @@ import kinoalmanaxLQ from "../images/movieList/Kinoalmanax.jpg";
 import v_pogone_za_BenksiLQ from "../images/movieList/V_pogone_za_Benksi.jpg";
 
 export const projectConstants = {
+  headerData: {
+    accauntImgPink: headerAccauntImgPink,
+    legacyAccauntImgPink: headerLegacyAccauntImgPink,
+    accauntImg: headerAccauntImg,
+    legacyAccauntImg: headerLegacyAccauntImg,
+    logo: logo,
+    legacyLogo: headerLegacyAccauntImgPink,
+  },
   aboutProjectData: [
     {
       title: "Дипломный проект включал 5 этапов",
@@ -122,7 +134,7 @@ export const projectConstants = {
     buttonText: "Зарегистрироваться",
     redirectLine: "Уже зарегестрированы?",
     redirectLink: "/signin",
-    redirectText:"Войти"
+    redirectText: "Войти",
   },
   loginFormData: {
     logo: logo,
@@ -131,9 +143,11 @@ export const projectConstants = {
     buttonText: "Войти",
     redirectLine: "Ещё не зарегестрированы?",
     redirectLink: "/signup",
-    redirectText:"Регистрация"
+    redirectText: "Регистрация",
   },
   profileData: {
-    title: (name) => {return `Привет, ${name}!`},
-  }
+    title: (name) => {
+      return `Привет, ${name}!`;
+    },
+  },
 };

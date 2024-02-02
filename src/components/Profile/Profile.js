@@ -3,7 +3,7 @@ import { useForm } from "../../hooks/useForm";
 import "./Profile.css";
 import { CurrentUserContext } from "../../context/CurrentUserContext";
 
-export function Profile({ profileData }) {
+export function Profile({ profileData, logOut }) {
   const { profileName, profileEmail } = useContext(CurrentUserContext);
   const { values, onChange, setValues } = useForm({});
   const [isEditMode, setMode] = useState(false);
@@ -13,8 +13,6 @@ export function Profile({ profileData }) {
   function handleModeSubmit(field) {
     setMode(!isEditMode);
   }
-
-
 
   return (
     <main className="profile">
@@ -67,7 +65,7 @@ export function Profile({ profileData }) {
             >
               Редактировать
             </button>
-            <button className="profile__logout-button">
+            <button onClick={() => logOut()} className="profile__logout-button">
               Выйти из аккаунта
             </button>
           </>

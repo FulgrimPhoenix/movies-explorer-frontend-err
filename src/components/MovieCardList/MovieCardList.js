@@ -3,7 +3,6 @@ import { MovieCard } from "../MovieCard/MovieCard";
 import "./MovieCardList.css";
 
 export function MovieCardList({ cardCellData, movieList }) {
-  
   const [cardListLength, setCardListLength] = React.useState(3);
 
   const [cardList, setCardList] = React.useState(() => {
@@ -16,7 +15,6 @@ export function MovieCardList({ cardCellData, movieList }) {
 
   React.useEffect(() => {
     setCardList(() => {
-      console.log(cardListLength);
       let result = [];
       for (let i = 0; i < cardListLength; i++) {
         result[i] = movieList[i];
@@ -24,7 +22,7 @@ export function MovieCardList({ cardCellData, movieList }) {
       return result;
     });
   }, [cardListLength]);
-  
+
   function showMoreCards() {
     setCardListLength(cardListLength + 3);
   }
@@ -32,12 +30,22 @@ export function MovieCardList({ cardCellData, movieList }) {
     <section className="movie-card-list">
       <ul className="movie-card-list__grid">
         {cardList.map((card) => {
-          return <MovieCard key={card.title} cardData={card} cellData={cardCellData} />;
+          return (
+            <MovieCard
+              key={card.title}
+              cardData={card}
+              cellData={cardCellData}
+            />
+          );
         })}
       </ul>
       <button
-        className="movie-card-list__button-more"
-        onClick={()=>showMoreCards()}
+        className={`${
+          cardListLength === movieList.length
+            ? "movie-card-list__button-more_disabled"
+            : "movie-card-list__button-more"
+        }`}
+        onClick={() => showMoreCards()}
       >
         Ещё
       </button>

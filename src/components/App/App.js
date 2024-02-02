@@ -1,8 +1,8 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
 import "../../vendor/fonts/fonts.css";
 import "../../vendor/normalize.css";
 import "./App.css";
-import React from "react";
+import React, { useEffect } from "react";
 
 import { Header } from "../Header/Header";
 import { Movies } from "../Movies/Movies.js";
@@ -12,14 +12,22 @@ import { Footer } from "../Footer/Footer";
 import { SearchForm } from "../SearchForm/SearchForm.js";
 import { MovieCardList } from "../MovieCardList/MovieCardList.js";
 import { Register } from "../Register/Register";
-import { LogRegForm } from "../LogRegForm/LogRegForm";
-import { LogRegInput } from "../LogRegInput/LogRegInput.js";
 import { CurrentUserContext } from "../../context/CurrentUserContext.js";
 import { Profile } from "../Profile/Profile.js";
 import { Login } from "../Login/Login.js";
+import { Page } from "../Page/Page.js";
 
 function App() {
   const [email, setEmail] = React.useState("");
+  const [logStatus, setLogStatus] = React.useState(true);
+  const [likedMovies, setLikedMovies] = React.useState([])
+
+  const navigate =useNavigate();
+
+  function logOut(){
+    setLogStatus(false);
+    navigate("/", { replace: true });
+  }
 
   function changeEmail(e) {
     setEmail(e.target.value);
@@ -32,14 +40,24 @@ function App() {
     >
       <div className="page">
         <Routes>
-          <Route path="movies" element={<Movies />}>
+          <Route
+            path="/"
+            element={
+              <>
+                <Header headerData={projectConstants.headerData} isLoggedIn={logStatus} />
+                <Page />
+                <Footer footerData={projectConstants.footerData} />
+              </>
+            }
+          >
             <Route
               index
+              element={<Main projectConstants={projectConstants} />}
+            />
+            <Route
+              path="movies"
               element={
                 <>
-                  <Header
-                    navigationButtons={["Фильмы", "Сохраненные фильмы"]}
-                  />
                   <SearchForm
                     formSearchUtils={projectConstants.formSearchUtils}
                   />
@@ -47,32 +65,28 @@ function App() {
                     cardCellData={projectConstants.moviesData.staticData}
                     movieList={projectConstants.moviesData.movieList}
                   />
-                  <Footer footerData={projectConstants.footerData} />
                 </>
               }
             />
+            <Route
+              path="saved-movies"
+              element={
+                <SearchForm
+                  formSearchUtils={projectConstants.formSearchUtils}
+                />
+              }
+            />
+            <Route
+              path="/profile"
+              element={<Profile profileData={projectConstants.profileData} logOut={logOut} />}
+            />
           </Route>
-          <Route path="/saved-movis" />
-          <Route
-            path="/"
-            element={
-              <>
-                <Header navigationButtons={["Фильмы", "Сохраненные фильмы"]} />
-                <Main projectConstants={projectConstants} />
-                <Footer footerData={projectConstants.footerData} />
-              </>
-            }
-          />
-          <Route
-            path="/profile"
-            element={<Profile profileData={projectConstants.profileData} />}
-          />
           <Route
             path="/signin"
             element={<Login loginFormData={projectConstants.loginFormData} />}
           ></Route>
           <Route
-            path="signup"
+            path="/signup"
             element={
               <Register registerFormData={projectConstants.registerFormData} />
             }
