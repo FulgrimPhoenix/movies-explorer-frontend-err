@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useUrlPathName } from "../../hooks/useUrlPathName";
 import { useWindowSize } from "../../hooks/useWindowSize";
 
-export function Header({ headerData, isLoggedIn }) {
+export function Header({ togglePopup, headerData, isLoggedIn }) {
   const setActive = ({ isActive }, baseStyle) =>
     isActive ? `${baseStyle} header__link_active` : `${baseStyle}`;
 
@@ -24,7 +24,7 @@ export function Header({ headerData, isLoggedIn }) {
           <img src={headerData.logo} alt="logo" />
         </Link>
         {windowWidth < 1000 ? (
-          <button className="header__menu-switcher">
+          <button onClick={togglePopup} className="header__menu-switcher">
             <img src={headerData.navBarIcon} alt="navIcon"/>
           </button>
         ) : (
@@ -70,7 +70,7 @@ export function Header({ headerData, isLoggedIn }) {
                         <picture className="header__accaunt-img">
                           <source
                             srcSet={
-                              !isMainPage
+                              isMainPage
                                 ? headerData.accauntImgPink
                                 : headerData.accauntImg
                             }
@@ -79,7 +79,7 @@ export function Header({ headerData, isLoggedIn }) {
                           />
                           <img
                             src={
-                              !isMainPage
+                              isMainPage
                                 ? headerData.legacyAccauntImgPink
                                 : headerData.legacyAccauntImg
                             }

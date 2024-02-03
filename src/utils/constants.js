@@ -3,10 +3,10 @@ import searchIcon from "../images/search-icon.svg";
 import savedImg from "../images/savedImg.svg";
 import logo from "../images/logo.svg";
 import legacyLogo from "../images/logo.png";
-import headerAccauntImg from "../images/headerLogo.svg";
-import headerLegacyAccauntImg from "../images/headerLogo.png";
-import headerAccauntImgPink from "../images/headerLogoForAll.svg";
-import headerLegacyAccauntImgPink from "../images/headerLogoForAll.svg";
+import headerAccauntImgPink from "../images/headerLogo.png";
+import headerLegacyAccauntImgPink from "../images/headerLogo.png";
+import headerAccauntImg from "../images/headerLogoForAll.svg";
+import headerLegacyAccauntImg from "../images/headerLogoForAll.png";
 import navBarIcon from "../images/menuNavBarIcon.svg";
 import exitButton from "../images/exit.svg"
 //HQ picture
@@ -20,9 +20,9 @@ import v_pogone_za_BenksiLQ from "../images/movieList/V_pogone_za_Benksi.jpg";
 
 export const projectConstants = {
   headerData: {
-    accauntImgPink: headerAccauntImgPink,
+    accauntImgPink: headerLegacyAccauntImgPink,
     legacyAccauntImgPink: headerLegacyAccauntImgPink,
-    accauntImg: headerAccauntImg,
+    accauntImg: headerLegacyAccauntImg,
     legacyAccauntImg: headerLegacyAccauntImg,
     logo: logo,
     legacyLogo: headerLegacyAccauntImgPink,
@@ -155,5 +155,6 @@ export const projectConstants = {
   },
   popupData: {
     exitButton: exitButton,
+    accauntImg: headerLegacyAccauntImg
   }
 };

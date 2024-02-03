@@ -17,17 +17,25 @@ import { Profile } from "../Profile/Profile.js";
 import { Login } from "../Login/Login.js";
 import { Page } from "../Page/Page.js";
 import { MenuPopup } from "../MenuPopup/MenuPopup.js";
+import { useUrlPathName } from "../../hooks/useUrlPathName.js";
 
 function App() {
   const [email, setEmail] = React.useState("");
   const [logStatus, setLogStatus] = React.useState(true);
-  const [likedMovies, setLikedMovies] = React.useState([])
+  const [likedMovies, setLikedMovies] = React.useState([]);
+  const [isMenuPopupOpen, setIsMenuPopupOpen] = React.useState(false);
+  const isProfilePage = useUrlPathName() === "/profile";
 
   const navigate =useNavigate();
 
   function logOut(){
     setLogStatus(false);
     navigate("/", { replace: true });
+  }
+
+  function handleTogglePopup(){
+    setIsMenuPopupOpen(!isMenuPopupOpen);
+    console.log(1);
   }
 
   function changeEmail(e) {
@@ -45,9 +53,9 @@ function App() {
             path="/"
             element={
               <>
-                <Header headerData={projectConstants.headerData} isLoggedIn={logStatus} />
+                <Header togglePopup={handleTogglePopup} headerData={projectConstants.headerData} isLoggedIn={logStatus} />
                 <Page />
-                <Footer footerData={projectConstants.footerData} />
+                {isProfilePage ? "" : <Footer footerData={projectConstants.footerData} />}
               </>
             }
           >
@@ -93,7 +101,7 @@ function App() {
             }
           ></Route>
         </Routes>
-        <MenuPopup popupData={projectConstants.popupData}/>
+        <MenuPopup togglePopup={handleTogglePopup} popupStatus={isMenuPopupOpen} popupData={projectConstants.popupData}/>
       </div>
     </CurrentUserContext.Provider>
   );

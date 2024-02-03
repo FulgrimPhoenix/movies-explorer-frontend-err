@@ -117,9 +117,10 @@
   height: 45px;
   border-radius: 3px;
   border: none;
-  background: rgb(52, 86, 243);
+  background: #000;
   transition: opacity .2s linear;
   cursor: pointer;
+  color: #fff;
 }
 
 
