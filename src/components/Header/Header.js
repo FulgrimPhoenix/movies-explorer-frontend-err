@@ -23,10 +23,27 @@ export function Header({ togglePopup, headerData, isLoggedIn }) {
         <Link className="header__logo" to="/">
           <img src={headerData.logo} alt="logo" />
         </Link>
-        {windowWidth < 1000 ? (
+        {windowWidth < 769 ? (
+          isLoggedIn ?
           <button onClick={togglePopup} className="header__menu-switcher">
             <img src={headerData.navBarIcon} alt="navIcon"/>
           </button>
+          :
+          <ul className="header__menu-list">
+            <li className="header__menu-item">
+              <Link className="header__link" to="signup">
+                Регистрация
+              </Link>
+            </li>
+            <li className="header__menu-item header__menu-item_dark-theme">
+              <Link
+                className="header__link header__link_dark-theme"
+                to="signin"
+              >
+                Войти
+              </Link>
+            </li>
+          </ul>
         ) : (
           <div className="header__menu">
             <nav>

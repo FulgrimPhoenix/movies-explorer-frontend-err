@@ -12,13 +12,13 @@ export function Main({ projectConstants }) {
           Учебный проект студента факультета Веб-разработки.
         </h1>
       </div>
-      <nav className="menu">
-        <ul className="menu__list">
-          <li className="menu__list-item">О проекте</li>
-          <li className="menu__list-item">Технологии</li>
-          <li className="menu__list-item">Студент</li>
-        </ul>
-      </nav>
+      <div className="menu">
+        <nav className="menu__list">
+          <a href="#about-project" className="menu__list-item">О проекте</a>
+          <a href="#techs" className="menu__list-item">Технологии</a>
+          <a href="#about-me" className="menu__list-item">Студент</a>
+        </nav>
+      </div>
       <AboutProject
         aboutProjectData={projectConstants.aboutProjectData}
       />

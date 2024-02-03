@@ -16,6 +16,10 @@
   justify-content: space-between;
 }
 
+.about-project__item{
+  max-width: 550px;
+}
+
 .about-project__item-title {
   list-style: none;
   padding: 0;
@@ -58,6 +62,7 @@
 }
 
 .about-project__timeline-text {
+  margin: 9px 0;
   color: #000;
   font-family: Inter;
   font-size: 14px;
@@ -68,11 +73,6 @@
 
 .about-project__timeline-text_dark-theme {
   color: #fff;
-  font-family: Inter;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
 }
 
 .about-project__timeline-title {
@@ -85,4 +85,14 @@
   font-weight: 500;
   line-height: 17px; /* 121.429% */
   align-self: flex-end;
+}
+
+@media screen and (max-width: 969px) {
+  .about-project {
+    padding: 0 50px;
+  }
+
+  .about-project__item {
+    max-width: 318px;
+  }
 }

@@ -2,6 +2,22 @@
   width: 100%;
 }
 
+
+.section-title {
+  margin: 0 auto;
+  padding: 110px 0 22px;
+  max-width: 1140px;
+  color: #000;
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.88px;
+  text-align: left;
+  border-bottom: #000 solid 1px;
+}
+
 .intro{
   background: url("../../images/main-landing-logo.svg") no-repeat;
   background-size: 320px 320px;
@@ -39,7 +55,7 @@
   color: #fff;
   list-style-type: none;
   padding: 0;
-  margin: 24px 40px;
+  margin: 24px 20px;
   color: #fff;
   font-family: Inter;
   font-size: 13px;
@@ -54,4 +70,17 @@
 
 .menu__list-item:last-child{
   margin-right: 0;
+}
+
+@media screen and (max-width: 769px) {
+  .intro{
+    background-position: center 224px;
+  }
+  .intro__title {
+    padding: 326px 0 342px;
+  }
+
+  .section-title {
+    padding: 90px 0 22px;
+  }
 }

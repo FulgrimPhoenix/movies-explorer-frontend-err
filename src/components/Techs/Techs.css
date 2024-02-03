@@ -17,7 +17,8 @@
   font-size: 50px;
   font-style: normal;
   font-weight: 400;
-  line-height: 58px; /* 116% */
+  line-height: 58px;
+  /* 116% */
   letter-spacing: -2px;
   max-width: 600px;
 }
@@ -30,7 +31,8 @@
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px; /* 142.857% */
+  line-height: 20px;
+  /* 142.857% */
   letter-spacing: -0.56px;
   max-width: 460px;
 }
@@ -58,4 +60,24 @@
 
 .techs-grid__cell-content {
   margin: auto;
+  color: rgb(0, 0, 0);
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: -4%;
+  text-align: center;
+}
+
+@media screen and (max-width: 969px) {
+  .techs {
+    padding: 0 50px;
+  }
+
+  .techs__description {
+    margin: 22px auto 0;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -4%;
+  }
 }

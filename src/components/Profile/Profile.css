@@ -5,6 +5,13 @@
 
 .profile__title {
   margin: 74px auto 0;
+  color: rgb(0, 0, 0);
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0%;
+  text-align: center;
 }
 
 .profile__form {
@@ -124,6 +131,21 @@
 }
 
 
-.profile__save-button:hover{
+.profile__save-button:hover {
   opacity: .7;
+}
+
+@media screen and (max-width: 969px) {
+  .profile__title{
+    margin: 236px auto 0;
+  }
+  .profile__form{
+    margin: 96px auto auto;
+  }
+  .profile__edit-button{
+    margin: 210px auto 0;
+  }
+  .profile__save-button{
+    margin: 210px auto 0;
+  }
 }

@@ -2,7 +2,7 @@ import "./AboutMe.css";
 
 export function AboutMe({ AboutMeData }) {
   return (
-    <section className="about-me">
+    <section id="about-me" className="about-me">
       <h3 className="section-title">{AboutMeData.sectionTitle}</h3>
       <div className="about-me__container">
         <div className="about-me__info">

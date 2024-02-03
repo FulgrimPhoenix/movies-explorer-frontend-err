@@ -1,5 +1,6 @@
 .header {
-  margin: 0 auto;
+  margin: 0;
+  padding: 0 70px;
   background-color: #fff;
 }
 .header_main-page-color{
@@ -148,7 +149,7 @@
 }
 
 .header__menu-switcher{
-  margin: auto 30px auto 0;
+  margin: 0;
   padding: 0;
   border: none;
   background: rgba(0, 0, 0, 0);
@@ -158,4 +159,10 @@
 
 .header__menu-switcher:hover{
   opacity: .7;
+}
+
+@media screen and (max-width: 769px) {
+  .header {
+    padding: 0 30px;
+  }
 }

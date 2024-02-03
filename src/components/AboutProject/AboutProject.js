@@ -2,7 +2,7 @@ import "./AboutProject.css";
 
 export function AboutProject({ aboutProjectData }) {
   return (
-    <section className="about-project">
+    <section id="about-project" className="about-project">
       <h3 className="section-title">О проекте</h3>
       <div className="about-project__container">
         
@@ -20,8 +20,8 @@ export function AboutProject({ aboutProjectData }) {
         </ul>
         {/* Try to refactor table architecture */}
         <div className="about-project__timeline-container">
-          <div className="about-project__timeline-item_dark-theme">
-            <p className="about-project__timeline-text_dark-theme">
+          <div className="about-project__timeline-item about-project__timeline-item_dark-theme">
+            <p className="about-project__timeline-text about-project__timeline-text_dark-theme">
               1 неделя
             </p>
           </div>

@@ -35,7 +35,6 @@ function App() {
 
   function handleTogglePopup(){
     setIsMenuPopupOpen(!isMenuPopupOpen);
-    console.log(1);
   }
 
   function changeEmail(e) {

@@ -2,7 +2,7 @@ import "./Techs.css";
 
 export function Techs({ techsList, techsData }) {
   return (
-    <section className="techs">
+    <section id="techs" className="techs">
       <h3 className="section-title">Технологии</h3>
       <div className="techs__container">
         <h2 className="techs__title">
