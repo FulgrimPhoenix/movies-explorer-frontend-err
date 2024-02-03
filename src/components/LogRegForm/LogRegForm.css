@@ -42,3 +42,9 @@
 .log-reg-form__button:hover{
   opacity: .8;
 }
+
+@media screen and (max-width:876px) {
+  .log-reg-form{
+    margin: 232px auto 0;
+  }
+}
