@@ -3,7 +3,7 @@
   padding: 0 70px;
   background-color: #fff;
 }
-.header_main-page-color{
+.header_main-page-color {
   background-color: rgb(243, 193, 248);
 }
 
@@ -52,11 +52,11 @@
   line-height: 18px;
   letter-spacing: 0%;
   padding: 6px 0;
-  transition: opacity .3s linear;
+  transition: opacity 0.3s linear;
 }
 
 .header__nav-link:hover {
-  opacity: .7;
+  opacity: 0.7;
 }
 
 .header__accaunt-nav-link {
@@ -70,11 +70,11 @@
   letter-spacing: 0px;
   text-align: left;
   padding: 7px 0;
-  transition: opacity .3s linear;
+  transition: opacity 0.3s linear;
 }
 
 .header__accaunt-nav-link:hover {
-  opacity: .7;
+  opacity: 0.7;
 }
 
 .header__menu-item_dark-theme {
@@ -148,17 +148,17 @@
   border-bottom: 2px solid rgb(0, 0, 0);
 }
 
-.header__menu-switcher{
+.header__menu-switcher {
   margin: 0;
   padding: 0;
   border: none;
   background: rgba(0, 0, 0, 0);
   cursor: pointer;
-  transition: opacity .3s linear;
+  transition: opacity 0.3s linear;
 }
 
-.header__menu-switcher:hover{
-  opacity: .7;
+.header__menu-switcher:hover {
+  opacity: 0.7;
 }
 
 @media screen and (max-width: 769px) {
@@ -170,5 +170,16 @@
 @media screen and (max-width: 400px) {
   .header {
     padding: 0 14px;
+  }
+
+  .header__menu-item {
+    padding: 5px 12px;
+    margin-right: 2px;
+  }
+  .header__link {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0px;
   }
 }

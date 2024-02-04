@@ -14,14 +14,18 @@ export function Main({ projectConstants }) {
       </div>
       <div className="menu">
         <nav className="menu__list">
-          <a href="#about-project" className="menu__list-item">О проекте</a>
-          <a href="#techs" className="menu__list-item">Технологии</a>
-          <a href="#about-me" className="menu__list-item">Студент</a>
+          <a href="#about-project" className="menu__list-item">
+            О проекте
+          </a>
+          <a href="#techs" className="menu__list-item">
+            Технологии
+          </a>
+          <a href="#about-me" className="menu__list-item">
+            Студент
+          </a>
         </nav>
       </div>
-      <AboutProject
-        aboutProjectData={projectConstants.aboutProjectData}
-      />
+      <AboutProject aboutProjectData={projectConstants.aboutProjectData} />
       <Techs
         techsList={projectConstants.techsData.techsList}
         techsData={projectConstants.techsData}

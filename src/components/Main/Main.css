@@ -2,7 +2,6 @@
   width: 100%;
 }
 
-
 .section-title {
   margin: 0 auto;
   padding: 110px 0 22px;
@@ -22,7 +21,7 @@
   background: url("../../images/main-landing-logo.svg") no-repeat;
   background-size: 320px 320px;
   background-position: center 82px;
-  background-color: #F3C1F8;
+  background-color: #f3c1f8;
 }
 
 .intro__title {
@@ -89,9 +88,16 @@
 }
 
 @media screen and (max-width: 400px) {
+  .section-title {
+    padding: 70px 0 28px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+
   .intro {
     background-size: 248px 248px;
-    background-position: 142px center;
+    background-position: center 142px;
   }
 
   .intro__title {
@@ -99,10 +105,15 @@
     font-size: 31px;
     font-weight: 400;
     line-height: 39px;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.7px;
   }
 
-  .menu__list-item{
-    margin: 25px 24px;
+  .menu__list-item {
+    margin: 25px 12px;
+    color: rgb(255, 255, 255);
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0px;
   }
 }

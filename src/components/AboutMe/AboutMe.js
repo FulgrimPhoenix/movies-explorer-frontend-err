@@ -6,15 +6,9 @@ export function AboutMe({ AboutMeData }) {
       <h3 className="section-title">{AboutMeData.sectionTitle}</h3>
       <div className="about-me__container">
         <div className="about-me__info">
-          <h2 className="about-me__title">
-            {AboutMeData.name}
-          </h2>
-          <h4 className="about-me__subtitle">
-            {AboutMeData.specialization}
-          </h4>
-          <p className="about-me__myInfo">
-            {AboutMeData.aboutMe}
-          </p>
+          <h2 className="about-me__title">{AboutMeData.name}</h2>
+          <h4 className="about-me__subtitle">{AboutMeData.specialization}</h4>
+          <p className="about-me__myInfo">{AboutMeData.aboutMe}</p>
           <a
             className="about-me__myRef"
             href="https://github.com/FulgrimPhoenix"
@@ -24,7 +18,11 @@ export function AboutMe({ AboutMeData }) {
             Github
           </a>
         </div>
-        <img src={AboutMeData.photo} alt="myPhoto" />
+        <img
+          className="about-me__photo"
+          src={AboutMeData.photo}
+          alt="myPhoto"
+        />
       </div>
     </section>
   );
