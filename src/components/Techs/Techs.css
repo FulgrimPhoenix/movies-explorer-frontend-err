@@ -78,7 +78,14 @@
     margin: 22px auto 0;
     font-size: 12px;
     line-height: 18px;
-    letter-spacing: -4%;
+    letter-spacing: 1px;
+  }
+  .techs__container{
+    padding: 80px 0 88px;
+  }
+  .techs-grid{
+    padding: 0 10px;
+    margin-top: 83px;
   }
 }
 

@@ -92,6 +92,11 @@
     letter-spacing: 0px;
   }
 
+  .about-me__photo{
+    width: 255px;
+    height: 304px;
+  }
+
   .about-me__info {
     max-width: 364px;
   }

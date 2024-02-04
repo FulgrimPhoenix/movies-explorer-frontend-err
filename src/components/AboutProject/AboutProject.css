@@ -95,6 +95,19 @@
   .about-project__item {
     max-width: 318px;
   }
+
+  .about-project__timeline-container {
+    margin: 93px auto 0;
+    padding-bottom: 90px;
+  }
+
+  .about-project__item-description {
+    margin-top: 22px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0%;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -151,6 +164,4 @@
     letter-spacing: 0px;
     align-self: center;
   }
-
-  
 }

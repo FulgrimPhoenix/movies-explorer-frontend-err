@@ -3,10 +3,9 @@ import "./LogRegForm.css";
 export function LogRegForm( {children, formData }) {
   return (
     <form className="log-reg-form" noValidate>
-      <picture>
+      <picture className="log-reg-form__logo">
         <source srcSet={formData.logo} media="(min-width: 600px)" type="image/svg" />
         <img
-          className="log-reg-form__logo"
           src={formData.legacyLogo}
           alt="logo"
         />
