@@ -18,6 +18,7 @@ import { Login } from "../Login/Login.js";
 import { Page } from "../Page/Page.js";
 import { MenuPopup } from "../MenuPopup/MenuPopup.js";
 import { useUrlPathName } from "../../hooks/useUrlPathName.js";
+import { NotFoundPage } from "../NotFoundPage/NotFoundPage.js";
 
 function App() {
   const [email, setEmail] = React.useState("");
@@ -31,6 +32,10 @@ function App() {
   function logOut(){
     setLogStatus(false);
     navigate("/", { replace: true });
+  }
+
+  function goBack(){
+    navigate("../", {replace: false})
   }
 
   function handleTogglePopup(){
@@ -99,6 +104,7 @@ function App() {
               <Register registerFormData={projectConstants.registerFormData} />
             }
           ></Route>
+            <Route path="*" element={<NotFoundPage goBack={goBack} notFoundPageData={projectConstants.notFoundPageData} />}/>
         </Routes>
         <MenuPopup togglePopup={handleTogglePopup} popupStatus={isMenuPopupOpen} popupData={projectConstants.popupData}/>
       </div>

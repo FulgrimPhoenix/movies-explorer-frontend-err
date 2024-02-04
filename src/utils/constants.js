@@ -156,5 +156,10 @@ export const projectConstants = {
   popupData: {
     exitButton: exitButton,
     accauntImg: headerLegacyAccauntImg
+  },
+  notFoundPageData: {
+    title: "404",
+    subTitle: "Страница не найдена",
+    buttonText: "Назад"
   }
 };
