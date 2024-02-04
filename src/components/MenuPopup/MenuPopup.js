@@ -9,7 +9,7 @@ export function MenuPopup({ togglePopup, popupStatus, popupData }) {
     if (e.target === overlay) {
       return togglePopup()
     } else {
-      if(e.target === navLink){
+      if (e.target === navLink) {
         return togglePopup()
       }
       return
@@ -26,13 +26,13 @@ export function MenuPopup({ togglePopup, popupStatus, popupData }) {
           <MenuLink onClick={togglePopup} title={"Главная"} to={"/"} styleMode={"popup__link-item"} />
           <MenuLink onClick={togglePopup} title={"Фильмы"} to={"/movies"} styleMode={"popup__link-item"} />
           <MenuLink onClick={togglePopup} title={"Сохраненные фильмы"} to={"/saved-movies"} styleMode={"popup__link-item"} />
-          <div className="popup__accaunt-cell">
-            <MenuLink onClick={togglePopup} title="Аккаунт" to={"/profile"} styleMode={"popup__link-item popup__link-item_accaunt"} />
-            <div className="popup__accaunt-image-container">
-              <img className="popup__accaunt-image" src={popupData.accauntImg} alt="accImg" />
-            </div>
-          </div>
         </nav>
+        <div className="popup__accaunt-cell">
+          <MenuLink onClick={togglePopup} title="Аккаунт" to={"/profile"} styleMode={"popup__link-item popup__link-item_accaunt"} />
+          <div className="popup__accaunt-image-container">
+            <img className="popup__accaunt-image" src={popupData.accauntImg} alt="accImg" />
+          </div>
+        </div>
       </div>
     </section>
   );

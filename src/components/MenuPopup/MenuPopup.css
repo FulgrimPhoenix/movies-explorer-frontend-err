@@ -34,14 +34,14 @@
 }
 
 .popup__link-items {
-  margin: 110px auto;
+  margin: 10.7vh auto 0;
   display: flex;
   flex-direction: column;
   max-width: 340px;
 }
 
 .popup__accaunt-cell {
-  margin: 60vh auto 92px;
+  margin: auto auto 92px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
